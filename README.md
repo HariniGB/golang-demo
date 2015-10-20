@@ -8,7 +8,7 @@ To install: Download the .pkg [here](https://golang.org/dl/)
 ### To set up environment
 ```bash
 $ mkdir golang
-$ export GOPATH=$HOME/golang
+$ export GOPATH=[full_path_to_dir]/golang
 ```
 
 ###Recommended folder structure

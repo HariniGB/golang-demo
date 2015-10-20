@@ -169,13 +169,6 @@ variable := <- ch
  Evaluate from top to bottom and stops when a case is successful, or chooses the fallthrough/default case.
 
 ```
-package main
-
-import (
-	"fmt"
-	"time"
-)
-
 func main() {
 	fmt.Println("When's Saturday?")
 	

@@ -40,7 +40,7 @@ Android support was added in version 1.4, which has since been ported to also ru
 
 
 ## Cheat Sheet
-**Go app skeleton:**
+### Go app skeleton:
 ```
 packages main
 
@@ -53,8 +53,39 @@ func main() {
 	
 }
 ```
+### Variables:
+variables can be declared with specified type
+```
+var i, j int = 1, 4
+```
+or implicitly with :=
+```
+i := 1
+j := 4
+```
+Constants can not be declared with :=
+```
+const Pi = 3.14
+```
+**Basic types**
+```
+bool
+string
+int, int8, int16, int32, int64
+uint, uint8, uint16, uint32, uint64, uintptr
+rune is an alias for int32
+uint is at least 32 bits but not an alias for uint32
+float32, float64
+complex64, complex128
+```
+Default values:
+```
+0 for numeric
+false for bool
+"" for string
+```
 
-**functions**
+### Functions:
 functions defines its arguments types:<br>
 ```
 func add(x int, y int) int { // the last int defines the return type
@@ -76,10 +107,41 @@ func split(sum int) (x, y int) {
 }
 ```
 
+### For loops:
+```
+for i := 0; i < 10; i++ {
+	sum += i
+}
+```
+shorthand:
+```
+for ; sum < 10 ; {
+	sum += sum
+}
+which is basically a while loop:
+```
+for sum < 10 {
+	sum += sum
+}
 
+### If statements:
+```
+if x < 0 {
+	
+} else {
+	
+}
+```
+if statments can execute code
+```
+if x:=3; x < y {
+	
+}
+```
+x is only accessible inside the scope of the if statement including subsequent else etc.
 
-
-
-
+### Concurrency
+Goroutine is a lightweight thread managed by Go runtime<br>
+a function that is called by **go** will run asyncron
 
 

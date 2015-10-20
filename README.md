@@ -166,7 +166,7 @@ To receive from channel:
 variable := <- ch
 ```
 **Switch**
-Switch case is familiar. They evaluate from top to bottom and stops when a case is successful.
+ Evaluate from top to bottom and stops when a case is successful, or chooses the fallthrough/default case.
 
 ```
 package main

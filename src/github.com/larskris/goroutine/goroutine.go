@@ -11,8 +11,6 @@ func say(s string) {
 		time.Sleep(1000 * time.Millisecond)
 		fmt.Println(s)
 		fmt.Println(time.Now().Second())
-		
-		
 	}
 }
 

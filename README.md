@@ -40,22 +40,46 @@ Android support was added in version 1.4, which has since been ported to also ru
 
 
 ## Cheat Sheet
-Every Go app is made up of packages.
-Every Go app needs **packaged main** and **func main()**<br>
+**Go app skeleton:**
+```
+packages main
 
-**bacis import paths:**
 import (
-	"fmt"		// for io like fmt.Println()
-	"math"	// for basic math like math.Sqrt()
+	"fmt"		// for io like fmt.Println(), optional
+	"math"	// for basic math like math.Sqrt(), optional
 )
+
+func main() {
+	
+}
+```
 
 **functions**
 functions defines its arguments types:<br>
-'''
+```
 func add(x int, y int) int { // the last int defines the return type
 	return x+y
 }
-'''
+```
+
+functions can return multiple results
+```
+a, b := split(sum)
+```
+
+functions can also return naked results
+```
+func split(sum int) (x, y int) {
+	x = sum * .4
+	y = sum - x
+	return
+}
+```
+
+
+
+
+
 
 
 

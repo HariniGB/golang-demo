@@ -169,8 +169,6 @@ variable := <- ch
 Switch case is familiar. They evaluate from top to bottom and stops when a case is successful.
 
 ```
-
-
 package main
 
 import (
@@ -200,8 +198,6 @@ func main() {
 	}
 	fmt.Println(time.Now().Weekday() + 2)
 }
-
-
 ```
 
 

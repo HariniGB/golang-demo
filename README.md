@@ -151,20 +151,7 @@ func main() {
 	say("other string")
 }
 ```
-**Channels**
-Channels behave like an array that can only be pushed to and shift from. First in is first out. <br>
-To make a channel:
-```
-ch := make(chan int)
-```
-To send to a channel:
-```
-ch <- some_value
-```
-To receive from channel:
-```
-variable := <- ch
-```
+
 **Switch**
  Evaluate from top to bottom and stops when a case is successful, or chooses the fallthrough/default case.
 
@@ -192,6 +179,22 @@ func main() {
 	fmt.Println(time.Now().Weekday() + 2)
 }
 ```
+
+**Channels**
+Channels behave like an array that can only be pushed to and shift from. First in is first out. <br>
+To make a channel:
+```
+ch := make(chan int)
+```
+To send to a channel:
+```
+ch <- some_value
+```
+To receive from channel:
+```
+variable := <- ch
+```
+
 
 
 

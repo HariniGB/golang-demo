@@ -31,12 +31,31 @@ $ bin/folder_path
 
 ## What is Golang
 
-
 Go, also commonly referred to as golang, is a programming language developed at Google in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson. It is a statically typed language with syntax loosely derived from that of C, adding garbage collection, type safety, some structural typing capabilities, additional built-in types such as variable-length arrays & key-value maps, and a large standard library.
 Android support was added in version 1.4, which has since been ported to also run on iOS. - [Wikipedia](https://en.wikipedia.org/wiki/Go_(programming_language))<br>
 
-
 ## Resources
 ###[Interactive tutorial](https://tour.golang.org/welcome/1)
-###[Interactive tutorial](https://tour.golang.org/welcome/1)
+###[Repl.it like editor](http://play.golang.org/)
+
+
+## Cheat Sheet
+Every Go app is made up of packages.
+Every Go app needs **packaged main** and **func main()**<br>
+
+**bacis import paths:**
+import (
+	"fmt"		// for io like fmt.Println()
+	"math"	// for basic math like math.Sqrt()
+)
+
+**functions**
+functions defines its arguments types:<br>
+'''
+func add(x int, y int) int { // the last int defines the return type
+	return x+y
+}
+'''
+
+
 

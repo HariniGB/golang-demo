@@ -45,8 +45,9 @@ Android support was added in version 1.4, which has since been ported to also ru
 packages main
 
 import (
-	"fmt"		// for io like fmt.Println(), optional
-	"math"	// for basic math like math.Sqrt(), optional
+	"fmt"		// e.g. fmt.Println(), optional
+	"math"	// e.g. math.Sqrt(), optional
+	"time"	// e.g. time.Sleep(), optional
 )
 
 func main() {
@@ -118,12 +119,13 @@ shorthand:
 for ; sum < 10 ; {
 	sum += sum
 }
+```
 which is basically a while loop:
 ```
 for sum < 10 {
 	sum += sum
 }
-
+```
 ### If statements:
 ```
 if x < 0 {
@@ -142,6 +144,28 @@ x is only accessible inside the scope of the if statement including subsequent e
 
 ### Concurrency
 Goroutine is a lightweight thread managed by Go runtime<br>
-a function that is called by **go** will run asyncron
+The below function will run say() as two different goroutines in the same address space
+```
+func main() {
+	go say("string")
+	say("other string")
+}
+```
+**Channels**
+Channels behave like an array that can only be pushed to and shift from. First in is first out. <br>
+To make a channel:
+```
+ch := make(chan int)
+```
+To send to a channel:
+```
+ch <- some_value
+```
+To receive from channel:
+```
+variable := <- ch
+```
+
+
 
 

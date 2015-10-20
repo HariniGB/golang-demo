@@ -165,6 +165,44 @@ To receive from channel:
 ```
 variable := <- ch
 ```
+**Switch**
+Switch case is familiar. They evaluate from top to bottom and stops when a case is successful.
+
+```
+
+
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	fmt.Println("When's Saturday?")
+	
+	//implicitly declares today as today's day
+	today := time.Now().Weekday()
+	
+	//takes the time of the day "Saturday"
+	switch time.Saturday {
+	//cheks each case
+	case today + 0:
+		fmt.Println("Today.")
+	case today + 1:
+		fmt.Println("Tomorrow.")
+	case today + 2:
+		fmt.Println("In two days.")
+		
+	//if none of the cases are succesful it chooses the default case
+	default:
+		fmt.Println("Too far away.")
+	}
+	fmt.Println(time.Now().Weekday() + 2)
+}
+
+
+```
 
 
 
